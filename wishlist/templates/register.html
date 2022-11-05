@@ -4,30 +4,31 @@
 <title>Account Registration</title>
 {% endblock meta %}
 
-{% block content %}
+{% block content %}  
 
 <div class = "login">
-    <h1>Registration Form</h1>
+    
+    <h1>Registration Form</h1>  
 
-        <form method="POST" >
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-                <tr>
+        <form method="POST" >  
+            {% csrf_token %}  
+            <table>  
+                {{ form.as_table }}  
+                <tr>  
                     <td></td>
-                    <td><input type="submit" name="submit" value="Register"/></td>
-                </tr>
-            </table>
+                    <td><input type="submit" name="submit" value="Register"/></td>  
+                </tr>  
+            </table>  
         </form>
 
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-        </ul>
+    {% if messages %}  
+        <ul>   
+            {% for message in messages %}  
+                <li>{{ message }}</li>  
+                {% endfor %}  
+        </ul>   
     {% endif %}
 
-</div>
+</div>  
 
 {% endblock content %}
